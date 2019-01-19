@@ -1,17 +1,17 @@
 .PHONY: run
 run:
-	docker run --name nginx -p 10000:80 -itd feisky/nginx:cpu
-	docker run --name phpfpm -itd --network container:nginx feisky/php-fpm:cpu
+	docker run --name nginx -p 10000:80 -itd 192.168.200.120/perf/nginx:cpu
+	docker run --name phpfpm -itd --network container:nginx 192.168.200.120/perf/php-fpm:cpu
 
 .PHONY: build
 build:
-	docker build -t feisky/nginx:cpu -f Dockerfile.nginx .
-	docker build -t feisky/php-fpm:cpu -f Dockerfile.php-fpm .
+	docker build -t 192.168.200.120/perf/nginx:cpu -f Dockerfile.nginx .
+	docker build -t 192.168.200.120/perf/php-fpm:cpu -f Dockerfile.php-fpm .
 
 .PHONY: push
 push:
-	docker push feisky/nginx:cpu
-	docker push feisky/php-fpm:cpu
+	docker push 192.168.200.120/perf/nginx:cpu
+	docker push 192.168.200.120/perf/php-fpm:cpu
 
 .PHONY: clean
 clean:
