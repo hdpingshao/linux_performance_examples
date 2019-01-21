@@ -1,6 +1,6 @@
 FROM bitnami/php-fpm
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com"
 
 ENV STRESS_VERSION=1.0.4
 RUN apt-get update && apt-get install -y g++ make curl  && \
