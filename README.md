@@ -17,5 +17,6 @@
 所有案例的编译运行都需要预先安装 Docker 以及必要的编译工具。以 CentOS7.5 为例，可以运行以下命令来安装它们：
 
 ```sh
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install -y docker-ce
 ```
