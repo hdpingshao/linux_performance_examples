@@ -1,6 +1,6 @@
 # iowait 使用率过高案例
 
-**《[Linux 性能优化实战](https://time.geekbang.org/column/intro/140)》第 07 和 08 篇案例。**
+**《[Linux 性能优化实战](https://github.com/hdpingshao/ops/tree/master/Linux_performance)》第 07 和 08 篇案例。**
 
 案例场景为多个子进程读取磁盘导致以下两种现象：
 
@@ -19,7 +19,7 @@ make build
 make run
 ```
 
-默认的运行命令为 `docker run --privileged --name=app -itd feisky/app:iowait`。
+默认的运行命令为 `docker run --privileged --name=app -itd 192.168.200.120/perf/app:iowait`。
 
 你还可以通过以下三个选项来修改磁盘读取的行为：
 
@@ -30,7 +30,7 @@ make run
 这些选项的使用方法为：
 
 ```sh
-docker run --privileged --name=app -itd feisky/app:iowait /app -d /dev/sdb -s 67108864 -c 20
+docker run --privileged --name=app -itd 192.168.200.120/perf/app:iowait /app -d /dev/sdb -s 67108864 -c 20
 ```
 
 案例运行后，你可以执行 `docker logs app` 查看它的日志，正常情况下，可以看到如下的输出：
