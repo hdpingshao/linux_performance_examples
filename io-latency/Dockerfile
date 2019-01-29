@@ -1,6 +1,6 @@
 FROM python:alpine
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com"
 
 RUN pip install flask
 

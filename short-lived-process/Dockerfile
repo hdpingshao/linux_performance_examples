@@ -1,6 +1,6 @@
 FROM ubuntu
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com"
 
 ENV STRESS_VERSION=1.0.4
 RUN apt-get update && \

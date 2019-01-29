@@ -1,7 +1,5 @@
 # MySQL 慢查询案例
 
-**《[Linux 性能优化实战](https://time.geekbang.org/column/intro/140)》第 xx 篇案例。**
-
 案例场景：
 
 * MySQL 查询特别慢，一个简单的查询需要 15 秒

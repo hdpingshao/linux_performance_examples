@@ -1,6 +1,6 @@
 FROM redis:alpine
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com"
 
 ADD redis.conf /etc/redis.conf
 

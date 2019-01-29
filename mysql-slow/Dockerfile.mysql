@@ -1,6 +1,6 @@
 FROM mysql:5.6
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com.com"
 
 ENV MYSQL_ALLOW_EMPTY_PASSWORD=1
 ADD mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnf

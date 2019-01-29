@@ -1,6 +1,6 @@
 FROM python:3.6
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com"
 
 RUN pip install flask redis
 

@@ -1,16 +1,16 @@
 .PHONY: run
 run:
-	docker run -v /tmp:/tmp --name=app -itd feisky/logapp
+	docker run -v /tmp:/tmp --name=app -itd 192.168.200.120/perf/logapp
 
 
 .PHONY: build
 build:
-	docker build -t feisky/logapp -f Dockerfile .
+	docker build -t 192.168.200.120/perf/logapp -f Dockerfile .
 
 
 .PHONY: push
 push:
-	docker push feisky/logapp
+	docker push 192.168.200.120/perf/logapp
 
 
 .PHONY: clean

@@ -1,7 +1,5 @@
 # iowait 使用率过高案例
 
-**《[Linux 性能优化实战](https://github.com/hdpingshao/ops/tree/master/Linux_performance)》第 07 和 08 篇案例。**
-
 案例场景为多个子进程读取磁盘导致以下两种现象：
 
 * 系统的 iowait 使用率和平均负载过高

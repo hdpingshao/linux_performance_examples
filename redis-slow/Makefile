@@ -2,17 +2,17 @@ DATA_NUM ?= 5000
 
 .PHONY: run
 run: redis
-	docker run --name=app --network=container:redis -itd feisky/redis-app
+	docker run --name=app --network=container:redis -itd 192.168.200.120/perf/redis-app
 
 .PHONY: redis
 redis:
-	docker run --name=redis -itd -p 10000:80 feisky/redis-server
+	docker run --name=redis -itd -p 10000:80 192.168.200.120/perf/redis-server
 
 
 .PHONY: build
 build:
-	docker build -t feisky/redis-app -f Dockerfile .
-	docker build -t feisky/redis-server -f Dockerfile.redis .
+	docker build -t 192.168.200.120/perf/redis-app -f Dockerfile .
+	docker build -t 192.168.200.120/perf/redis-server -f Dockerfile.redis .
 
 
 .PHONY: init
@@ -22,8 +22,8 @@ init:
 
 .PHONY: push
 push:
-	docker push feisky/redis-app
-	docker push feisky/redis-server
+	docker push 192.168.200.120/perf/redis-app
+	docker push 192.168.200.120/perf/redis-server
 
 .PHONY: clean
 clean:

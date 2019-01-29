@@ -1,7 +1,5 @@
 # 内存泄漏案例
 
-**《[Linux 性能优化实战](https://time.geekbang.org/column/intro/140)》第 18 篇案例。**
-
 案例场景：
 
 * 应用程序存在内存泄漏

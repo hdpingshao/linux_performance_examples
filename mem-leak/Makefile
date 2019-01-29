@@ -1,18 +1,18 @@
 .PHONY: build
 build:
 	gcc -o app app.c -pthread
-	docker build -t feisky/app:mem-leak -f Dockerfile .
+	docker build -t 192.168.200.120/perf/app:mem-leak -f Dockerfile .
 	gcc -o app app-fix.c -pthread
-	docker build -t feisky/app:mem-leak-fix -f Dockerfile .
+	docker build -t 192.168.200.120/perf/app:mem-leak-fix -f Dockerfile .
 
 .PHONY: push
 push:
-	docker push feisky/app:mem-leak
-	docker push feisky/app:mem-leak-fix
+	docker push 192.168.200.120/perf/app:mem-leak
+	docker push 192.168.200.120/perf/app:mem-leak-fix
 
 .PHONY: run
 run:
-	docker run --name=app -itd feisky/app:mem-leak
+	docker run --name=app -itd 192.168.200.120/perf/app:mem-leak
 
 .PHONY: clean
 clean:

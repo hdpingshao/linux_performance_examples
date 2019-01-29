@@ -1,15 +1,15 @@
 .PHONY: build
 build:
 	gcc -o app app.c
-	docker build -t feisky/app:short-process -f Dockerfile .
+	docker build -t 192.168.200.120/perf/app:short-process -f Dockerfile .
 
 .PHONY: push
 push:
-	docker push feisky/app:short-process
+	docker push 192.168.200.120/perf/app:short-process
 
 .PHONY: run
 run:
-	docker run --name=app -itd feisky/app:short-process
+	docker run --name=app -itd 192.168.200.120/perf/app:short-process
 
 .PHONY: clean
 clean:

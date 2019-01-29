@@ -1,6 +1,6 @@
 FROM ubuntu
 
-LABEL maintainer="feiskyer@gmail.com"
+LABEL maintainer="420874756@qq.com"
 
 ADD app /app
 ADD app.c /app.c
